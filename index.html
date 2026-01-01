@@ -5,169 +5,169 @@
 <title>User Registration</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    font-family: "Poppins", Arial, sans-serif;
-}
+    * {
+        box-sizing: border-box;
+        font-family: "Poppins", Arial, sans-serif;
+    }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
 
-.container {
-    width: 950px;
-    background: #fff;
-    border-radius: 14px;
-    padding: 30px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    animation: fadeIn 0.7s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #764ba2;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    font-size: 14px;
-    color: #444;
-    font-weight: 500;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: 0.3s;
-}
-
-input:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102,126,234,0.2);
-    outline: none;
-}
-
-.gender {
-    display: flex;
-    gap: 25px;
-    margin-top: 10px;
-}
-
-.gender label {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-}
-
-.btn {
-    width: 100%;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.error {
-    font-size: 12px;
-    color: #e63946;
-    margin-top: 3px;
-}
-
-table {
-    width: 100%;
-    margin-top: 35px;
-    border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-thead {
-    background: #667eea;
-    color: white;
-}
-
-th, td {
-    padding: 14px;
-    text-align: center;
-    font-size: 14px;
-}
-
-tbody tr {
-    transition: 0.2s;
-}
-
-tbody tr:hover {
-    background: #f1f3ff;
-}
-
-.action-btn {
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: none;
-    font-size: 13px;
-    cursor: pointer;
-    margin: 2px;
-    transition: 0.3s;
-}
-
-.edit {
-    background: #2ecc71;
-    color: white;
-}
-
-.edit:hover {
-    background: #27ae60;
-}
-
-.delete {
-    background: #e74c3c;
-    color: white;
-}
-
-.delete:hover {
-    background: #c0392b;
-}
-
-@media (max-width: 700px) {
     .container {
+        width: 950px;
+        background: #fff;
+        border-radius: 14px;
+        padding: 30px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        animation: fadeIn 0.7s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #764ba2;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 14px;
+        color: #444;
+        font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
         width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        transition: 0.3s;
+    }
+
+    input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102,126,234,0.2);
+        outline: none;
+    }
+
+    .gender {
+        display: flex;
+        gap: 25px;
+        margin-top: 10px;
+    }
+
+    .gender label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+    }
+
+    .btn {
+        width: 100%;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .error {
+        font-size: 12px;
+        color: #e63946;
+        margin-top: 3px;
     }
 
     table {
-        font-size: 12px;
+        width: 100%;
+        margin-top: 35px;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
     }
-}
+
+    thead {
+        background: #667eea;
+        color: white;
+    }
+
+    th, td {
+        padding: 14px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    tbody tr {
+        transition: 0.2s;
+    }
+
+    tbody tr:hover {
+        background: #f1f3ff;
+    }
+
+    .action-btn {
+        padding: 6px 14px;
+        border-radius: 20px;
+        border: none;
+        font-size: 13px;
+        cursor: pointer;
+        margin: 2px;
+        transition: 0.3s;
+    }
+
+    .edit {
+        background: #2ecc71;
+        color: white;
+    }
+
+    .edit:hover {
+        background: #27ae60;
+    }
+
+    .delete {
+        background: #e74c3c;
+        color: white;
+    }
+
+    .delete:hover {
+        background: #c0392b;
+    }
+
+    @media (max-width: 700px) {
+        .container {
+            width: 100%;
+        }
+
+        table {
+            font-size: 12px;
+        }
+    }
 </style>
 </head>
 
@@ -314,3 +314,4 @@ function checkPassword() {
 
 </body>
 </html>
+
