@@ -222,7 +222,19 @@
 </div>
 
 <script>
-    let users = [];
+   let users = [];
+    let storedUsers = localStorage.getItem("users");
+    try {
+        users = storedUsers ? JSON.parse(storedUsers) : [];
+        if(!Array.isArray(users)){
+            users = [];
+            localStorage.setItem("users", JSON.stringify(users));
+        }
+    } catch(e){
+        console.error("localStorage parse error:", e);
+        users = [];
+        localStorage.setItem("users", JSON.stringify(users));
+    }
 
     function saveUser(e) {
         e.preventDefault();
@@ -303,3 +315,4 @@
 
 </body>
 </html>
+
