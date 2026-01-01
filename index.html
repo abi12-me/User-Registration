@@ -240,13 +240,22 @@ window.onload = function() {
 function saveUser(e) {
     e.preventDefault();
     let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
+    let email = document.getElementById("email").value.trim().toLowerCase();
     let password = document.getElementById("password").value.trim();
     let gender = document.querySelector('input[name="gender"]:checked');
     let index = document.getElementById("index").value;
 
     if(!name || !email || !password || !gender){
         alert("Fill all fields");
+        return;
+    }
+
+    // Name first letter capital
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+
+    // Email must be @gmail.com
+    if(!email.endsWith("@gmail.com")){
+        alert("Only @gmail.com emails allowed");
         return;
     }
 
@@ -257,6 +266,18 @@ function saveUser(e) {
     resetForm();
     loadUsers();
 }
+
+function checkEmail() {
+    let email = document.getElementById("email").value.trim().toLowerCase();
+    if(email === "") {
+        emailErr.innerText = "Email required";
+    } else if(!email.endsWith("@gmail.com")) {
+        emailErr.innerText = "Only @gmail.com allowed";
+    } else {
+        emailErr.innerText = "";
+    }
+}
+
 
 function loadUsers() {
     let rows = "";
@@ -314,4 +335,5 @@ function checkPassword() {
 
 </body>
 </html>
+
 
